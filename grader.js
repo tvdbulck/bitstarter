@@ -65,19 +65,20 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 
-var checkUrl = function(url, checksfile) {
-    var r = restlerUrl(url);
-    //console.log(r);
-    if(flgUrlFileWritten) {
-	return checkHtmlFile(tmpResultFile, checksfile);
-    }
-    else {
-	while(!flgUrlFileWritten) {
-	    console.log("waiting for file to be written ...");
-	    sleep(500);
-	}
-	return checkHtmlFile(tmpResultFile, checksfile);
-    }
+var processUrl = function(url, checksfile) {
+    //console.log("2 calling restler for url "+url);
+    var r = restler.get(url).on('complete', function(data) {
+	//console.log("2 succes, start writing file now...");
+        fs.writeFileSync(tmpResultFile, data);
+	//console.log("2 file is written...");
+	var checkJson = checkHtmlFile(tmpResultFile, checksfile);
+	//console.log("2 check html file is done.");
+	var outJson = JSON.stringify(checkJson, null, 4);
+	//console.log("########################################################33");
+	console.log(outJson);
+    });
+    //console.log("2 done");
+
 };
 
 var clone = function(fn) {
@@ -113,14 +114,14 @@ if(require.main == module) {
         .parse(process.argv);
     var checkJson = [];
     if(program.url) {
-	console.log("URL: "+program.url);
-	checkJson = checkUrl(program.url, program.checks);
+	//console.log("URL: "+program.url);
+	processUrl(program.url, program.checks);
     }
     else {
 	checkJson = checkHtmlFile(program.file, program.checks);
+	var outJson = JSON.stringify(checkJson, null, 4);
+	console.log(outJson);
     }
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
