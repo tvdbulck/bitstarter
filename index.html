@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="Tim Van den Bulcke">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="Tim Van den Bulcke" />
 <title>DNA Jewel</title>
 
 <!--<link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css"> -->
-<link type="text/css" href="./stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="./stylesheets/darkstrap-v0.9.0.css" rel="stylesheet" />
+<link type="text/css" href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+<link type="text/css" href="./assets/darkstrap-v0.9.0.css" rel="stylesheet" />
 
-<link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link type="text/css" href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Knewave"> -->
 
 
@@ -63,73 +64,90 @@ p.lead {
 .navigation, .pitch, .section1, .section2, .faq, .footer {
   padding: 10px 0px 10px 0px;
 }
-.video, .thermometer, .order, .social {
+
+.navigation, .footer {
+  
+}
+
+.video, .slideshow {
   border: 1px dotted;
   text-align: center;
 }
-.video {
+.video, .slideshow {
   height: 124px;
   line-height: 124px;
 }
-.slideshow {
-  height: 124px;
-  line-height: 124px;
-}
-.thermometer, .order, .social {
-  height: 40px;
-  line-height: 40px;
-}
+
 div.row {
   border: 1px solid;
 } 
+
 </style>
 
 </head>
 
 <body>
   <div class="container">
+    <!-- NAVIGATION -->
     <div class="row navigation">
-      <div class="span2 logo">
+      <div class="span1 home">
 	Home
       </div>
-      <div class="span6 blank">
+      <div class="span1 about">
 	About
       </div>
-      <div class="span4 about">
+      <div class="span1 contact">
 	Contact
       </div>
     </div>
 
-    <div class="row heading">
-      <div class="span12">
-	<h1>DNA Jewel</h1>
-      </div>
-    </div>
+    <div class="row container">
 
-    <div class="row subheading">
-      <div class="span12">
-	<p class="lead">Transform your personal DNA into artwork!</p>
-      </div>
-    </div>
+      <!-- MAIN PANEL -->
+      <div class="span8">
 
-    <div class="row pitch">
-      <div class="span6 slideshow">
-	slideshow
+	<div class="row heading">
+	  <div class="span8">
+	    <center><h1>DNA Jewel</h1></center>
+	  </div>
+	</div>
+	
+	<div class="row subheading">
+	  <div class="span8">
+	    <p class="lead">Transform your personal DNA into artwork!</p>
+	  </div>
+	</div>
+	
+	<div class="row span8 pitch container">
+	  <div class="span4 video">
+	    slideshow
+	  </div>
+	  <div class="span4 video">
+	    Video
+	  </div>
+	</div>
+	
+	<div class="row section1">
+	  <div class="span8">
+	    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+	  </div>
+	</div>
+	
+	<div class="row faq">
+	  <div class="span8">
+	    FAQ
+	  </div>
+	</div>
       </div>
-      <div class="span6 video">
-	Video
-      </div>
-    </div>
 
-    <div class="row section1">
-      <div class="span12">
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-      </div>
-    </div>
-
-    <div class="row faq">
-      <div class="span12">
-	FAQ
+      <!-- RIGHT PANEL -->
+      <div class="span4 rightpanel">
+	<div class="row">
+	  <div class="span4">
+	    <p>X days left</p>
+	    <p>% funded out of Z $</p>
+	  </div>
+	</div>
       </div>
     </div>
 
