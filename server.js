@@ -1,0 +1,5 @@
+var connect = require('connect');
+var port = process.env.PORT || 8081;
+
+connect.createServer(connect.static(__dirname)).listen(port);
+console.log("Listening on " + port);
