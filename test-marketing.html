@@ -57,6 +57,14 @@
         color: white;
       }
 
+      span.material {
+        span.text-success;
+      }
+
+      span.itemtype {
+        span.text-error;
+      }
+
 
       /* Customize the navbar links to be fill the entire space of the .navbar */
       .navbar .navbar-inner {
@@ -238,17 +246,25 @@
           <p><a class="btn btn-success" href="./pledge.html#halloffame">View details »</a></p>
           <p>HALL OF FAME: thanks for your contribution! Not ready for your own DNA jewel yet, but eager to support this project? This is your chance for an eternal hall of fame place.</p>
         </div>
+      </div>
+      <div class="row-fluid">
         <div class="span4">
           <h3>Pledge &euro; 19 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#steelearrings">View details »</a></p>
-          <p>Receive a unique pair of 3D-printed steel earrings based on your name.</p>
+          <p>Receive a unique pair of 3D-printed <span class="text-success">steel</span> <span class="text-error">earrings</span> based on your name.</p>
         </div>
         <div class="span4">
           <h3>Pledge &euro; 29 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#steelhanger">View details »</a></p>
-          <p>Receive a unique 3D-printed steel hanger based on your name.</p>
+          <p>Receive a unique 3D-printed <span class="text-success">steel</span> <span class="text-error">hanger</span> based on your name.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 45 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#steelhanger">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-success">steel</span> <span class="text-error">set (hanger+earrings)</span> based on your name.</p>
         </div>
       </div>
       <div class="row-fluid">
@@ -256,19 +272,19 @@
           <h3>Pledge &euro; 69 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#silverearrings">View details »</a></p>
-          <p>Receive a unique pair of 3D-printed SILVER earrings based on your name.</p>
+          <p>Receive a unique pair of 3D-printed <span class="text-info">silver</span> <span class="text-error">earrings</span> based on your name.</p>
         </div>
         <div class="span4">
           <h3>Pledge &euro; 99 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#silverhanger">View details »</a></p>
-          <p>Receive a unique 3D-printed SILVER hanger based on your name.</p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">hanger</span> based on your name.</p>
         </div>
         <div class="span4">
           <h3>Pledge &euro; 149 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#silverset">View details »</a></p>
-          <p>Receive a unique 3D-printed SILVER set (hanger+earrings) based on your name.</p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">set (hanger+earrings)</span> based on your name.</p>
         </div>
       </div>
       <div class="row-fluid">
@@ -276,19 +292,19 @@
           <h3>Pledge &euro; 199 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#dnaearrings">View details »</a></p>
-          <p>Receive a unique pair of 3D-printed SILVER earrings based on your DNA, the results of your DNA fingerprinting test and a certificate of uniqueness.</p>
+          <p>Receive a unique pair of 3D-printed <span class="text-info">silver</span> <span class="text-error">earrings</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
         </div>
         <div class="span4">
           <h3>Pledge &euro; 249 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#dnaearrings">View details »</a></p>
-          <p>Receive a unique 3D-printed SILVER hanger based on your DNA, the results of your DNA fingerprinting test and a certificate of uniqueness.</p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">hanger</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
         </div>
         <div class="span4">
           <h3>Pledge &euro; 399 or more</h3>
 	  <p class="nrbackers">0/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#dnaset">View details »</a></p>
-          <p>Receive a unique 3D-printed SILVER set (hanger+earrings) based on your DNA, the results of your DNA fingerprinting test and a certificate of uniqueness.</p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">set (hanger+earrings)</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
         </div>
       </div>
 
@@ -297,21 +313,22 @@
       <div class="row faq">
 	<div class="span12">
 	  <h2>FAQ</h2>
-	  <p class="question">Do you really make unique jewelry or is this just a way to attract customers?</p>
-	  <p>All our jewels are guaranteed unique. Every jewel is separately 3d printed and uniquely tailored to you, either based on your personal details or on your DNA results.</p>
+	  <p class="question">You mention that this is a crowdfunding project. What is crowdfunding?</p>
+	  <p>Crowdfunding is a relatively new way of funding initiatives of individual people or organizations through the joint contributions of many people (in our case: you!). It can be used to start a new company. See also this <a href="http://en.wikipedia.org/wiki/Crowdfunding">Wikipedia</a> article.</p>
+	  <p class="question">Do you really make <emph>unique</emph> jewelry or is this just a (sneaky) way to attract customers?</p>
+	  <p>All our jewels are <emph>guaranteed</emph> unique, we will never create the same jewel twice. Every jewel is separately 3d printed and uniquely tailored to you, either based on your DNA or on your personal profile.</p>
 	  <p class="question">I don't like to be DNA-tested, can I still order a jewel?</p>
-	  <p>Yes. Jewelry can be uniquified in two ways: through a DNA fingerprint or through your personal data. If you don't like a DNA test, just enter your name and some additional information, and we create a unique 'pDNA' (=personal DNA) fingerprint for you.</p>
+	  <p>Yes. Jewelry can be uniquified in two ways: through a DNA fingerprint or through your personal profile. If you prefer not to do the DNA test, just create a personal profile and we create the unique 'pDNA' (=personal DNA) fingerprint for you from this profile.</p>
+	  <p class="question">What is DNA fingerprinting?</p>
+	  <p>DNA fingerprinting is used in forensic analysis to uniquely identify an individual. It is usually used in parental testing or for criminal investigations (yes, CSI style!). See also this <a href="http://en.wikipedia.org/wiki/DNA_fingerprinting">Wikipedia article</a>.</p>
 	  <p class="question">Who conducts the DNA fingerprinting tests?</p>
-	  <p>DNA fingerprinting tests are conducted by a professional lab whose core business is DNA fingerprinting: <a href="www.dna-fingerprint.com">dna-fingerprint.com</a></p>
+	  <p>The DNA fingerprinting tests are conducted by a professional lab whose core business is DNA fingerprinting: <a href="www.dna-fingerprint.com">dna-fingerprint.com</a></p>
 	  <p class="question">How is the DNA test done? Will it hurt?</p>
 	  <p>We can immediately reassure you, DNA testing does not hurt! You will receive a kit to take the DNA sample. This is a really simple: just chew a gum for a few minutes and send the gum back to us. No needles, no pain, just chewing gum ;-)</p>
 	  <p class="question">What will you do with my DNA results?</p>
 	  <p>Nothing. We have no interest in DNA results whatsoever, so normally DNA fingerprinting results are not stored anywhere. However, if you would like to order additional DNA-based jewelry in the future, it might be interesting to still have the fingerprinting results. This will save you a (costly) additional DNA test. Bottom line: it's up to you to keep the results or not.</p>
 	  <p class="question">I would like to surprise my partner with a unique piece of jewelry. Can I do the DNA test without my partner knowing this?</p>
 	  <p>No. For your privacy protection, this is obviously not allowed. You can of course surprise your partner with </p>
-	  <p class="question">Help, I don't understand what you are saying.</p>
-	  <p></p>
-
 	</div>
       </div>
 
