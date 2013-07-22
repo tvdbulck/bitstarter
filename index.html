@@ -10,13 +10,15 @@
     <link href="./assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="./assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
     <link type="text/css" href="./assets/darkstrap-v0.9.0.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/social-buttons.css">    
+    <link rel="stylesheet" href="./assets/fonts.css">    
 
     <style type="text/css">
 
       /* Large desktop */
       @media (min-width: 980px) { 
         body {
-         padding-top: 60px;
+         padding-top: 40px;
         }
        .linediv-l {
          border-right: 1px white solid;
@@ -65,8 +67,8 @@
 
 
       body {
-        padding-top: 20px;
-        padding-bottom: 60px;
+        padding-top: 0px;
+        padding-bottom: 20px;
       }
 
       /* Custom container */
@@ -84,7 +86,7 @@
         text-align: center;
       }
       .jumbotron h1 {
-        font-size: 76px;
+        font-size: 50px;
         line-height: 1;
       }
       .jumbotron .lead {
@@ -222,13 +224,15 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="muted">DNA Jewel</h3>
-        <div class="navbar">
+<!--        <h3 class="muted">DNA Jewel</h3> -->
+        <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
-            <div class="container">
+            <div class="container-fluid">
               <ul class="nav">
-                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="#">Home</a></li>
                 <li><a href="./about.html">About</a></li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="./contact.html">Contact</a></li>
               </ul>
             </div>
@@ -238,43 +242,51 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Your personal and unique DNA-based jewelry.</h1>
+        <h1>Personal and unique DNA-based jewelry.</h1>
         <p class="lead">We create unique jewelry based on your personal DNA. Help us get started by supporting our project and give yourself or your partner a literally one-of-a-kind piece of jewelry.</p>
         <a class="btn btn-large btn-success" href="./pledge.html">Back this project and order now.</a>
       </div>
-
-      <hr>
 
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="./assets/img/examples/slide-01.jpg" alt="">
+          <img src="http://placehold.it/480x300" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>unique jewelry - for you, by you.</h1>
-              <p class="lead">Your DNA determines who you are, what you look like, and how you feel. DNA Jewel closes the loop and personalizes the jewelry you are wearing to the ultimate limit: based on your DNA profile, we create a <emph>unique</emph> piece of jewelry.</p>
+              <h1>Unique jewelry - for you, by you.</h1>
+              <p class="lead">Personalize the jewelry you are wearing to the ultimate limit: based on your DNA profile, we create a <emph>unique</emph> piece of jewelry - only for you.</p>
               <a class="btn btn-large btn-primary" href="#">Pre-order now</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="./assets/img/examples/slide-02.jpg" alt="">
+          <img src="http://placehold.it/480x300" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Certificate of uniqueness.</h1>
+              <p class="lead">You receive a certificate of uniqueness: you are the only person in the world that receives this jewel.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="./assets/img/examples/slide-03.jpg" alt="">
+          <img src="http://placehold.it/480x300" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Hanger, earrings ... or both?</h1>
+              <p class="lead">You can order a hanger, a set of earrings or both. Choose between steel or silver. Have a look in our gallery!</p>
+              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/480x300" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>DNA test or personal profile.</h1>
+              <p class="lead">Determine your unique DNA profile either through a real DNA test, or alternatively based on your personal profile ('pDNA'). The latter does not require a DNA test.</p>
               <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
             </div>
           </div>
@@ -291,7 +303,7 @@
 
 
       <!-- PLEDGES -->
-      <div class="row-fluid">
+      <div class="row-fluid" id="pledge">
         <div class="span4">
           <h3>Pledge &euro; 1 or more</h3>
 	  <p class="nrbackers">0/1000</p>
@@ -328,7 +340,7 @@
         </div>
         <div class="span4">
           <h3>Pledge &euro; 99 or more</h3>
-	  <p class="nrbackers">0/1000</p>
+	  <p class="nrbackers">1/1000</p>
           <p><a class="btn btn-success" href="./pledge.html#silverhanger">View details »</a></p>
           <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">hanger</span> based on your name.</p>
         </div>
@@ -360,28 +372,29 @@
         </div>
       </div>
 
-      <hr>
+      <hr />
 
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+      <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+      <div class="row-fluid">
         <div class="span12 actions">
-          <div class="offset2 span8 offset2">
+          <div class="span12">
             <div class="statistics">
-              <div class="span4">
+	      <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
+                     different in horizontal and vertical layouts, illustrating
+                     media queries. -->
                 <div class="linediv-l">
-                <h3>0</h3> <p>backers</p>
+                  <h3>1</h3> <p>backers</p>
                 </div>
-              </div>
-              <div class="span4">
+	      </div>
+	      <div class="span4">
                 <div class="linediv-c">
-                  <h3>0</h3> <p>of $10,000</p>
+                  <h3>&euro; 99</h3> <p>of &euro; 10,000</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-r">
-                <h3>30</h3> <p>days left</p>
+                  <h3>30</h3> <p>days left</p>
                 </div>
               </div>
             </div>
@@ -390,14 +403,9 @@
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
+              <div class="bar bar-success" style="width: 1%;"></div>
+              <div class="bar bar-warning" style="width: 99%;"></div>
             </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
           </div>
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
@@ -405,25 +413,22 @@
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Back project and preorder now!</button>
+          </div>
         </div>
       </div>
+
 
     <hr/>
 
 
-
-
-
-
-
-
-
-
-
-      <div class="row-fluid faq">
-	<div class="offset1 span10 offset1">
-	  <h3>FAQ</h3>
-	  <div class="accordion" id="faq-accordion">
+    <div class="row-fluid faq" id="faq">
+      <div class="offset1 span10 offset1">
+	<h3>FAQ</h3>
+	<div class="accordion" id="faq-accordion">
 	    <div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-ans1">
 		  You mention that this is a crowdfunding project. What is crowdfunding?
 	    </a></div></div>
@@ -488,9 +493,9 @@
 		Sorry, for obvious reasons of privacy protection, this is not allowed. 
 		Fortunately, you can surprise your partner by generating a 'pDNA' based on their personal profile.
 	    </div></div>
-	  </div>
-        </div>
+        </div> <!-- faq-accordion -->
       </div>
+    </div>
 
       <div class="footer">
         <p><center>© DNA Jewel 2013</center></p>
