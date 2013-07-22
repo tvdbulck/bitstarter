@@ -1,286 +1,362 @@
 <!DOCTYPE html>
-<!-- saved from url=(0070)https://spark-public.s3.amazonaws.com/startup/code/bitstarter-hw4.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>DNA Jewel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css"> -->
-    <link type="text/css" rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="./assets/bootstrap/css/bootstrap-responsive.css" />
+    <meta name="description" content="">
+    <meta name="author" content="Tim Van den Bulcke">
 
-    <link rel="stylesheet" href="./assets/font-awesome/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
-<!--
-    <script src="./assets/startup-code-jquery.js"></script>
-    <script src="./assets/startup-code-bootstrap.js"></script>
--->
-<!--    <link href="./new-index_files/css" rel="stylesheet" type="text/css"> -->
-<!--    <link href="./new-index_files/css(1)" rel="stylesheet" type="text/css"> -->
+    <!-- Le styles -->
+    <link href="./assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link type="text/css" href="./assets/darkstrap-v0.9.0.css" rel="stylesheet" />
+
     <style type="text/css">
-
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
       }
 
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
       }
 
-      /* All form factors */
-
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
         text-align: center;
       }
-      p.lead {
-        padding-top: 1.5%;
+      .jumbotron h1 {
+        font-size: 76px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
         font-size: 24px;
-        line-height: 30px;
+        line-height: 1.25;
       }
-      p {
-        font-size: 18px;
-        line-height: 24px;
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
       }
 
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
       }
-      .order {
-        padding: 2% 0%;
+      .marketing p + h4 {
+        margin-top: 28px;
       }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
+
+      .question {
+        font-weight: bold;
         color: white;
       }
 
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
+      span.material {
+        span.text-success;
       }
-      .asset {
-        padding: 2.5% 0%;
+
+      span.itemtype {
+        span.text-error;
       }
-      .footer {
-        color: #cccccc;
+
+
+      /* Customize the navbar links to be fill the entire space of the .navbar */
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
         text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
       }
-      .footer p {
-        font-size: 11px;
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
       }
-      .footer a {
-        color: #ccccff;
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
       }
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
     </style>
+    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
   </head>
-  <body style="">
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Bitstarter</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <body>
 
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Product</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
 
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
+      <div class="masthead">
+        <h3 class="muted">DNA Jewel</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
             </div>
           </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
+        </div><!-- /.navbar -->
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Your personal and unique DNA-based jewelry.</h1>
+        <p class="lead">We create unique jewelry based on your personal DNA. Help us get started by supporting our project and give yourself or your partner a literally one-of-a-kind piece of jewelry.</p>
+        <a class="btn btn-large btn-success" href="./pledge.html">Back this project and order now.</a>
+      </div>
+
+      <hr>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="./assets/img/examples/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>unique jewelry - for you, by you.</h1>
+              <p class="lead">Your DNA determines who you are, what you look like, and how you feel. DNA Jewels closes the loop and personalizes the jewelry you are wearing to the ultimate limit: based on your DNA profile, we create a <emph>unique</emph> piece of jewelry.</p>
+              <a class="btn btn-large btn-primary" href="#">Pre-order now</a>
             </div>
           </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
         </div>
-      </div>
-
-
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-      </div>
-
-
-      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-      <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
-                    What does FAQ stand for?
-                  </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Frequently Asked Question.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
-                  </a>
-                </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    A question which is commonly asked by users.
-                  </div>
-                </div>
-              </div>
+        <div class="item">
+          <img src="./assets/img/examples/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
-
+        </div>
+        <div class="item">
+          <img src="./assets/img/examples/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <hr>
+
+
+
+
+
+      <!-- PLEDGES -->
+      <div class="row-fluid">
+        <div class="span4">
+          <h3>Pledge &euro; 1 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#halloffame">View details »</a></p>
+          <p>HALL OF FAME: thanks for your contribution! Not ready for your own DNA jewel yet, but eager to support this project? This is your chance for an eternal hall of fame place.</p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <h3>Pledge &euro; 19 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#steelearrings">View details »</a></p>
+          <p>Receive a unique pair of 3D-printed <span class="text-success">steel</span> <span class="text-error">earrings</span> based on your name.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 29 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#steelhanger">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-success">steel</span> <span class="text-error">hanger</span> based on your name.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 45 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#steelhanger">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-success">steel</span> <span class="text-error">set (hanger+earrings)</span> based on your name.</p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <h3>Pledge &euro; 69 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#silverearrings">View details »</a></p>
+          <p>Receive a unique pair of 3D-printed <span class="text-info">silver</span> <span class="text-error">earrings</span> based on your name.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 99 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#silverhanger">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">hanger</span> based on your name.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 149 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#silverset">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">set (hanger+earrings)</span> based on your name.</p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <h3>Pledge &euro; 199 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#dnaearrings">View details »</a></p>
+          <p>Receive a unique pair of 3D-printed <span class="text-info">silver</span> <span class="text-error">earrings</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 249 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#dnaearrings">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">hanger</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
+        </div>
+        <div class="span4">
+          <h3>Pledge &euro; 399 or more</h3>
+	  <p class="nrbackers">0/1000</p>
+          <p><a class="btn btn-success" href="./pledge.html#dnaset">View details »</a></p>
+          <p>Receive a unique 3D-printed <span class="text-info">silver</span> <span class="text-error">set (hanger+earrings)</span> based on <span class="text-warning">your DNA</span>, the results of your DNA fingerprinting test and a <span class="text-warning">certificate</span> of uniqueness.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row faq">
+	<div class="span12">
+	  <h2>FAQ</h2>
+	  <p class="question">You mention that this is a crowdfunding project. What is crowdfunding?</p>
+	  <p>Crowdfunding is a relatively new way of funding initiatives of individual people or organizations through the joint contributions of many people (in our case: you!). It can be used to start a new company. See also this <a href="http://en.wikipedia.org/wiki/Crowdfunding">Wikipedia</a> article.</p>
+	  <p class="question">Do you really make <emph>unique</emph> jewelry or is this just a (sneaky) way to attract customers?</p>
+	  <p>All our jewels are <emph>guaranteed</emph> unique, we will never create the same jewel twice. Every jewel is separately 3d printed and uniquely tailored to you, either based on your DNA or on your personal profile.</p>
+	  <p class="question">I don't like to be DNA-tested, can I still order a jewel?</p>
+	  <p>Yes. Jewelry can be uniquified in two ways: through a DNA fingerprint or through your personal profile. If you prefer not to do the DNA test, just create a personal profile and we create the unique 'pDNA' (=personal DNA) fingerprint for you from this profile.</p>
+	  <p class="question">What is DNA fingerprinting?</p>
+	  <p>DNA fingerprinting is used in forensic analysis to uniquely identify an individual. It is usually used in parental testing or for criminal investigations (yes, CSI style!). See also this <a href="http://en.wikipedia.org/wiki/DNA_fingerprinting">Wikipedia article</a>.</p>
+	  <p class="question">Who conducts the DNA fingerprinting tests?</p>
+	  <p>The DNA fingerprinting tests are conducted by a professional lab whose core business is DNA fingerprinting: <a href="www.dna-fingerprint.com">dna-fingerprint.com</a></p>
+	  <p class="question">How is the DNA test done? Will it hurt?</p>
+	  <p>We can immediately reassure you, DNA testing does not hurt! You will receive a kit to take the DNA sample. This is a really simple: just chew a gum for a few minutes and send the gum back to us. No needles, no pain, just chewing gum ;-)</p>
+	  <p class="question">What will you do with my DNA results?</p>
+	  <p>Nothing. We have no interest in DNA results whatsoever, so normally DNA fingerprinting results are not stored anywhere. However, if you would like to order additional DNA-based jewelry in the future, it might be interesting to still have the fingerprinting results. This will save you a (costly) additional DNA test. Bottom line: it's up to you to keep the results or not.</p>
+	  <p class="question">I would like to surprise my partner with a unique piece of jewelry. Can I do the DNA test without my partner knowing this?</p>
+	  <p>No. For your privacy protection, this is obviously not allowed. You can of course surprise your partner with </p>
+	</div>
+      </div>
+
+
+
+
+      <div class="footer">
+        <p>© DNA Jewel 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="./assets/jquery-1.10.2.min.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.js"></script>
-</body></html>
+
+    <script>
+      !function ($) {
+        $(function(){
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="./assets/holder/holder.js"></script>
+
+  
+
+</body>
+</html>
